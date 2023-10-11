@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.colorchooser.HelloController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="0.0" prefWidth="66.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="164.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="139.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="223.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="130.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="175.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label text="Red">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Green" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Blue" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Alpha" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Slider fx:id="redSlider" max="255.0" onDragDetected="#redSliderDragged" onMouseDragged="#redSliderDragged" GridPane.columnIndex="1" />
+      <Slider fx:id="greenSlider" max="255.0" onDragDetected="#greenSliderDragged" onMouseDragged="#greenSliderDragged" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Slider fx:id="blueSlider" max="255.0" onDragDetected="#blueSliderDragged" onMouseDragged="#blueSliderDragged" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Slider fx:id="alphaSlider" max="1.0" onDragDetected="#alphaSliderDragged" onMouseDragged="#alphaSliderDragged" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="redTextField" GridPane.columnIndex="2">
+         <GridPane.margin>
+            <Insets right="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="greenTextField" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="blueTextField" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="alphaTextField" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="40.0" />
+         </GridPane.margin>
+      </TextField>
+      <Circle fill="DODGERBLUE" radius="60.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin>
+      </Circle>
+      <Rectangle fx:id="Rectangle" arcHeight="5.0" arcWidth="5.0" height="168.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="175.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Rectangle>
+   </children>
+</GridPane>
